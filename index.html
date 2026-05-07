@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>DecideByAI | AI로 비즈니스 판단을 돕는 실무형 도구와 컨설팅</title>
+
+  <meta
+    name="description"
+    content="DecideByAI는 AI 검색 노출, 마케팅 진단, 콘텐츠 기획, 이커머스 개선, 바이브코딩 기반 업무 도구 제작을 돕는 실무형 AI 비즈니스 허브입니다."
+  />
+
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://decidebyai.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DecideByAI | AI 비즈니스 도구와 컨설팅" />
+  <meta
+    property="og:description"
+    content="AI로 더 빠르게 판단하고, 더 정확하게 실행하세요. DecideByAI는 실무형 AI 도구와 교육·컨설팅을 제공합니다."
+  />
+  <meta property="og:url" content="https://decidebyai.com/" />
+  <meta property="og:site_name" content="DecideByAI" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DecideByAI",
+    "url": "https://decidebyai.com/",
+    "description": "AI 검색 노출, 마케팅 진단, 콘텐츠 기획, 이커머스 개선, 바이브코딩 기반 업무 도구 제작을 돕는 실무형 AI 비즈니스 허브입니다.",
+    "sameAs": []
+  }
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8fafc;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    .header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: -0.03em;
+    }
+
+    .nav a {
+      color: #374151;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 88px 20px 64px;
+      background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+    }
+
+    .badge {
+      display: inline-block;
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 1.22;
+      margin: 0 0 22px;
+      letter-spacing: -0.05em;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      font-size: 18px;
+      color: #4b5563;
+    }
+
+    .cta-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .cta {
+      display: inline-block;
+      background: #111827;
+      color: #ffffff;
+      padding: 14px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .cta.secondary {
+      background: #ffffff;
+      color: #111827;
+      border: 1px solid #d1d5db;
+    }
+
+    .container {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 52px 20px;
+    }
+
+    .section {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 36px;
+      margin-bottom: 26px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-top: 0;
+      letter-spacing: -0.04em;
+    }
+
+    .section-intro {
+      color: #4b5563;
+      max-width: 780px;
+      margin-bottom: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 22px;
+    }
+
+    .card strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .card p {
+      color: #4b5563;
+      margin: 0 0 16px;
+      font-size: 15px;
+    }
+
+    .card a {
+      color: #0369a1;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .highlight {
+      background: #f0f9ff;
+      border: 1px solid #bae6fd;
+      color: #075985;
+      border-radius: 16px;
+      padding: 22px;
+      margin-top: 20px;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .service-item {
+      border-left: 4px solid #111827;
+      background: #f9fafb;
+      padding: 18px;
+      border-radius: 14px;
+    }
+
+    .service-item strong {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .footer-cta {
+      text-align: center;
+      background: #111827;
+      color: #ffffff;
+      border-radius: 24px;
+      padding: 52px 28px;
+    }
+
+    .footer-cta h2 {
+      color: #ffffff;
+    }
+
+    .footer-cta p {
+      color: #d1d5db;
+      max-width: 720px;
+      margin: 0 auto 24px;
+    }
+
+    .footer-cta .cta {
+      background: #ffffff;
+      color: #111827;
+    }
+
+    footer {
+      text-align: center;
+      color: #6b7280;
+      font-size: 14px;
+      padding: 34px 20px;
+    }
+
+    @media (max-width: 720px) {
+      h1 {
+        font-size: 34px;
+      }
+
+      .hero {
+        padding-top: 64px;
+      }
+
+      .section {
+        padding: 26px;
+      }
+
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .nav a {
+        margin-left: 0;
+        margin-right: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">DecideByAI</div>
+      <div>
+        <a href="#tools">도구</a>
+        <a href="#consulting">교육·컨설팅</a>
+        <a href="#cases">제작 사례</a>
+        <a href="#contact">문의</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="badge">AI Business Decision Hub</div>
+
+      <h1>
+        AI로 비즈니스 판단을 돕는<br />
+        실무형 도구와 컨설팅
+      </h1>
+
+      <p>
+        DecideByAI는 AI 검색 노출, 마케팅 진단, 콘텐츠 기획, 이커머스 개선,
+        바이브코딩 기반 업무 도구 제작을 돕는 실무형 AI 비즈니스 허브입니다.
+        단순히 AI를 쓰는 것을 넘어, 더 빠르게 판단하고 더 정확하게 실행하는 구조를 만듭니다.
+      </p>
+
+      <div class="cta-wrap">
+        <a href="#tools" class="cta">무료 진단 도구 보기</a>
+        <a href="#consulting" class="cta secondary">교육·컨설팅 보기</a>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="section">
+        <h2>DecideByAI는 무엇을 하나요?</h2>
+
+        <p class="section-intro">
+          AI 도구는 많아졌지만, 실무에서 중요한 것은 “무엇을 어떻게 판단하고 실행할 것인가”입니다.
+          DecideByAI는 AI를 단순한 생산 도구가 아니라, 비즈니스 판단과 실행을 돕는 시스템으로 설계합니다.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <strong>AI 검색 노출 진단</strong>
+            <p>ChatGPT, Perplexity, Gemini 같은 AI가 브랜드를 어떻게 설명할 가능성이 있는지 점검합니다.</p>
+          </div>
+
+          <div class="card">
+            <strong>마케팅·콘텐츠 진단</strong>
+            <p>웹사이트, 블로그, 상세페이지, 키워드 구조를 실무 관점에서 분석합니다.</p>
+          </div>
+
+          <div class="card">
+            <strong>바이브코딩 도구 제작</strong>
+            <p>아이디어를 빠르게 웹 도구와 자동화 시스템으로 구현합니다.</p>
+          </div>
+
+          <div class="card">
+            <strong>AI 교육·컨설팅</strong>
+            <p>기업과 실무자를 위한 ChatGPT, Gemini, GEO, 자동화 교육을 제공합니다.</p>
+          </div>
+        </div>
+
+        <div class="highlight">
+          DecideByAI의 핵심은 “AI를 잘 쓰는 법”이 아니라,
+          AI로 의사결정과 실행 구조를 설계하는 것입니다.
+        </div>
+      </section>
+
+      <section class="section" id="tools">
+        <h2>무료 진단 및 실무형 AI 도구</h2>
+
+        <p class="section-intro">
+          아래 도구들은 바이브코딩과 AI 자동화를 활용해 제작한 실무형 도구입니다.
+          일부 도구는 무료 진단으로 제공되며, 상세 분석과 실행 전략은 유료 컨설팅으로 연결됩니다.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <strong>AI 검색 노출(GEO) 진단</strong>
+            <p>ChatGPT와 AI 검색 환경에서 우리 브랜드가 어떻게 보이는지 확인합니다.</p>
+            <a href="https://geo.decidebyai.com/" target="_blank" rel="noopener noreferrer">무료 진단하기 →</a>
+          </div>
+
+          <div class="card">
+            <strong>MAGIC 시각화 도구</strong>
+            <p>프롬프트와 기획 구조를 MAGIC 프레임워크로 시각화합니다.</p>
+            <a href="https://decidebyai.com/" target="_blank" rel="noopener noreferrer">도구 보기 →</a>
+          </div>
+
+          <div class="card">
+            <strong>도메인 레이더</strong>
+            <p>브랜드명, 도메인, 경쟁 가능성을 빠르게 검토하는 리서치 도구입니다.</p>
+            <a href="https://freedomainradar.decidebyai.com/" target="_blank" rel="noopener noreferrer">도구 보기 →</a>
+          </div>
+
+          <div class="card">
+            <strong>스마트스토어 진단 도구</strong>
+            <p>상품명, 키워드, 상세페이지 개선 포인트를 점검합니다.</p>
+            <a href="#" target="_blank" rel="noopener noreferrer">준비 중 →</a>
+          </div>
+
+          <div class="card">
+            <strong>DecideByAI Masterclass</strong>
+            <p>AI 실무 활용, GEO, 바이브코딩, 자동화를 배우는 교육 프로그램입니다.</p>
+            <a href="https://masterclass.decidebyai.com/" target="_blank" rel="noopener noreferrer">교육 보기 →</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="consulting">
+        <h2>교육·컨설팅 서비스</h2>
+
+        <p class="section-intro">
+          무료 도구는 문제를 발견하는 출발점입니다.
+          실제 개선과 성과 연결을 위해서는 진단 결과를 바탕으로 실행 전략을 설계해야 합니다.
+        </p>
+
+        <div class="service-list">
+          <div class="service-item">
+            <strong>GEO / AI 검색 노출 컨설팅</strong>
+            ChatGPT, Perplexity, Gemini에 브랜드가 더 잘 설명되도록 웹사이트와 콘텐츠 구조를 개선합니다.
+          </div>
+
+          <div class="service-item">
+            <strong>AI 마케팅 자동화 설계</strong>
+            콘텐츠 제작, 리드 수집, 보고서 생성, 고객 응대 흐름을 자동화합니다.
+          </div>
+
+          <div class="service-item">
+            <strong>기업·기관 AI 실무 교육</strong>
+            ChatGPT, Gemini, Claude, NotebookLM, 자동화 도구를 실무 중심으로 교육합니다.
+          </div>
+
+          <div class="service-item">
+            <strong>바이브코딩 기반 업무 도구 제작</strong>
+            개발자가 아니어도 쓸 수 있는 내부용 진단 도구와 업무 자동화 시스템을 설계합니다.
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="cases">
+        <h2>바이브코딩 제작 사례</h2>
+
+        <p class="section-intro">
+          DecideByAI의 도구들은 아이디어를 빠르게 실험하고, 실제 비즈니스 리드로 연결하기 위해 제작되었습니다.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <strong>GEO 진단 리드 수집 시스템</strong>
+            <p>Tally, Make, Google Sheets, Gmail을 연결해 무료 진단 신청과 알림을 자동화했습니다.</p>
+          </div>
+
+          <div class="card">
+            <strong>도메인·브랜드 리서치 도구</strong>
+            <p>신규 서비스명과 도메인 가능성을 빠르게 점검하는 실무형 도구입니다.</p>
+          </div>
+
+          <div class="card">
+            <strong>MAGIC 프레임워크 시각화</strong>
+            <p>프롬프트 설계와 교육 콘텐츠를 시각적으로 설명하기 위한 도구입니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer-cta" id="contact">
+        <h2>우리 회사에도 적용할 수 있을까요?</h2>
+
+        <p>
+          AI 검색 노출, 마케팅 자동화, 콘텐츠 전략, 내부 업무 도구 제작이 필요하다면
+          DecideByAI의 진단 도구와 교육·컨설팅을 통해 시작할 수 있습니다.
+        </p>
+
+        <a href="mailto:dreamjkd@gmail.com?subject=DecideByAI%20교육%20컨설팅%20문의" class="cta">
+          교육·컨설팅 문의하기
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    © DecideByAI. All rights reserved. contact dreamjkdj@gmail.com
+  </footer>
+</body>
+</html>
